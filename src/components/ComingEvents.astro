@@ -1,0 +1,31 @@
+---
+import EventCard from "@Components/EventCard";
+---
+
+<div class="flex flex-col gap-12 items-center" id="events">
+  <h2 class="text-3xl font-semibold transition-colors hover:text-cyan-200">
+    #Próximos Eventos
+  </h2>
+
+  <div class="flex flex-col lg:flex-row gap-12 justify-center">
+    <EventCard
+      src="https://polideportivomercedes.com.uy/assets/img/eventos/soriano_rall_19_21.png"
+      alt="rally"
+      client:visible
+      from="left"
+    />
+    <EventCard
+      src="https://polideportivomercedes.com.uy/assets/img/eventos/tcrcarreraswebmientrada.png"
+      alt="rally2"
+      url="https://mientrada.com.uy/evento/2408-y-2508-tcr-south-american-auvo-24282"
+      client:visible
+      from="right"
+    />
+  </div>
+</div>
+
+<style>
+  h2 {
+    font-family: "Raleway";
+  }
+</style>

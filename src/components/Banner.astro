@@ -1,0 +1,31 @@
+<div class="w-full" id="main">
+  <img
+    src="https://polideportivomercedes.com.uy/assets/img/banner1.png"
+    alt="banner"
+    class="w-full"
+    data-id="1"
+  />
+
+  <img
+    src="https://polideportivomercedes.com.uy/assets/img/banner.png"
+    alt="banner"
+    class="w-full"
+    data-id="2"
+  />
+</div>
+
+<style>
+  img[data-id="2"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    img[data-id="2"] {
+      display: block;
+    }
+
+    img[data-id="1"] {
+      display: none;
+    }
+  }
+</style>

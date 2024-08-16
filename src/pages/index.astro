@@ -1,0 +1,85 @@
+---
+import Banner from "@Components/Banner.astro";
+import HistoryBanner from "@Components/HistoryBanner.astro";
+import Layout from "@Layout/Layout.astro";
+import Video from "@Components/Video";
+import ComingEvents from "@Components/ComingEvents.astro";
+import CarrouselImages from "@Components/CarrouselImages";
+import tracksData from "@Data/tracks.json";
+import kartData from "@Data/kart.json";
+import TracksCarrousel from "@Components/TracksCarrousel";
+import carrouselImages from "@Data/images.json";
+---
+
+<Layout title="Inicio">
+  <div class="flex flex-col gap-24">
+    <Banner />
+    <HistoryBanner
+      isShort
+      images={[
+        {
+          src: "https://polideportivomercedes.com.uy/assets/img/carouselHistoria/carousel-10.jpg",
+          alt: "history-1",
+        },
+        {
+          src: "https://polideportivomercedes.com.uy/assets/img/carouselHistoria/carousel-8.jpg",
+          alt: "history-2",
+        },
+      ]}
+    />
+    <Video
+      src="https://polideportivomercedes.com.uy/assets/video/TCR.mp4"
+      client:visible
+    />
+    <ComingEvents />
+    <CarrouselImages images={carrouselImages} client:load />
+
+    <div id="tracks" class="flex flex-col gap-36">
+      <TracksCarrousel
+        title="#Pistas"
+        tracks={tracksData}
+        client:load
+        from="left"
+      />
+      <TracksCarrousel
+        title="#Pistas Kart"
+        subtitle="Pista Kart"
+        tracks={kartData}
+        client:load
+        from="right"
+      />
+    </div>
+
+    <Video
+      title="Video Tour"
+      src="https://polideportivomercedes.com.uy/assets/video/video.mp4"
+      id="pruebaPista"
+      client:visible
+    />
+  </div>
+</Layout>
+
+<style is:global>
+  .transition-from-left {
+    transform: translateX(-5rem);
+    opacity: 0.2;
+  }
+
+  .transition-from-right {
+    transform: translateX(5rem);
+    opacity: 0.2;
+  }
+
+  .loaded {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+</style>

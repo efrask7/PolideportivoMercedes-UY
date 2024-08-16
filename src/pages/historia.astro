@@ -1,0 +1,32 @@
+---
+import CarrouselImages from "@Components/CarrouselImages";
+import Layout from "@Layout/Layout.astro";
+import carrouselImages from "@Data/images.json";
+import Video from "@Components/Video";
+import HistoryBanner from "@Components/HistoryBanner.astro";
+---
+
+<Layout title="Historia">
+  <div class="flex flex-col gap-24">
+    <HistoryBanner
+      images={[
+        {
+          src: "https://polideportivomercedes.com.uy/assets/img/historiaFoto1.jpg",
+          alt: "history-1",
+        },
+        {
+          src: "https://polideportivomercedes.com.uy/assets/img/carouselHistoria/carousel-10.jpg",
+          alt: "history-2",
+        },
+      ]}
+    />
+
+    <CarrouselImages images={carrouselImages} client:load />
+
+    <Video
+      title="Video Tour"
+      src="https://polideportivomercedes.com.uy/assets/video/video.mp4"
+      client:visible
+    />
+  </div>
+</Layout>
