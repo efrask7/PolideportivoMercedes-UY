@@ -9,7 +9,9 @@ const { goBack } = Astro.props;
   class="h-20 lg:px-36 md:px-12 px-8 w-[100%] flex fixed z-50 transition-colors"
 >
   <nav class="flex flex-1 items-center justify-between font-bold w-full">
-    <a href="/" class="">Polideportivo Mercedes</a>
+    <a href="/" aria-label="Polideportivo Mercedes - Inicio"
+      >Polideportivo Mercedes</a
+    >
 
     <div class="flex gap-16">
       {!goBack ? <HeaderNav client:load /> : <NavLink name="Volver" url="/" />}

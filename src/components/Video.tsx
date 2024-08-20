@@ -29,7 +29,7 @@ export default function Video({ title, src, id }: IVideoProps) {
   
   return (
     <div
-      className="w-full lg:w-3/4 aspect-video m-auto relative rounded-lg overflow-hidden flex flex-col gap-8"
+      className="w-full lg:w-3/5 m-auto relative rounded-lg overflow-hidden flex flex-col gap-8"
       id={id}
     >
       {
@@ -40,10 +40,11 @@ export default function Video({ title, src, id }: IVideoProps) {
         )
       }
 
-      <video src={src} className="w-full" ref={videoRef} />
+      <video src={src} className="w-full" ref={videoRef}/>
       <button
         onClick={() => handleToggleVideo()}
-        className="absolute right-8 bottom-4 z-10 bg-cyan-400/80 hover:bg-cyan-500/80 py-2 px-4 rounded-md font-bold transition-colors text-2xl"
+        aria-label="Reproducir o pausar video"
+        className="absolute right-8 bottom-4 z-10 bg-cyan-400/80 hover:bg-cyan-500/80 py-2 px-4 rounded-lg font-bold transition-colors text-2xl"
       >
         {
           isPlaying

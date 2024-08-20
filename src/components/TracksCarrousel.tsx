@@ -47,8 +47,8 @@ export default function TracksCarrousel({ title, subtitle, tracks, from }: ITrac
         {
           tracks.map((track, index) => (
             <SwiperSlide key={index} >
-              <div className="flex flex-col gap-4 items-center py-10 px-4 md:px-16 ">
-                <div className="flex justify-between w-full text-3xl" style={{fontFamily: 'Raleway'}}>
+              <div className="flex flex-col gap-4 items-center py-8 lg:py-16 px-6 md:px-16 ">
+                <div className="flex justify-between w-full text-2xl md:text-3xl" style={{fontFamily: 'Raleway'}}>
                   <div>
                     <h3>{track.title}</h3>
                     {subtitle && <h4 className="text-sm text-neutral-200/80 mt-2">{subtitle}</h4>}

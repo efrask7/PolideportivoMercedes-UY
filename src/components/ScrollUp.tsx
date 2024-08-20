@@ -11,10 +11,8 @@ export default function ScrollUp() {
 
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 200) {
-        console.log('si')
         setOpacity(100)
       } else {
-        console.log('no')
         setOpacity(0)
       }
     })
@@ -49,6 +47,7 @@ export default function ScrollUp() {
       }}
       ref={btnRef}
       onClick={() => scrollUp()}
+      aria-label="Volver al inicio"
     >
       <BsArrowUp />
     </button>

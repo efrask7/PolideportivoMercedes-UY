@@ -50,7 +50,7 @@ export default function EventCard({ src, alt, url, from }: IEventCardProps) {
       {
         url 
         && 
-          <a href={url} className="absolute right-0 bottom-0 py-3 px-4 rounded-tl-lg bg-cyan-400/80 hover:bg-cyan-500/80 text-lg" target="_blank">
+          <a href={url} aria-label="Abrir vinculo de la imagen" className="absolute right-0 bottom-0 py-3 px-4 rounded-tl-lg bg-cyan-400/80 hover:bg-cyan-500/80 text-lg" target="_blank">
             <BsArrowRight/>
           </a>
       }

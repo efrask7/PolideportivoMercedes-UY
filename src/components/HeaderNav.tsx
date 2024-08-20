@@ -21,7 +21,7 @@ export default function HeaderNav() {
 
   return (
     <>
-    <div className="md:flex hidden gap-16">
+    <div className="lg:flex hidden gap-16">
       <NavLink name="Inicio" url="#main" isActive={linkActive==0} />
       <NavLink name="Historia" url="#about" isActive={linkActive==1} />
       <NavLink name="Prueba de Pista" url="#pruebaPista" isActive={linkActive==2} />
@@ -29,7 +29,7 @@ export default function HeaderNav() {
       <NavLink name="Eventos" url="#events" isActive={linkActive==4} />
     </div>
 
-    <div className="flex md:hidden">
+    <div className="flex lg:hidden">
       <NavResponsive/>
     </div>
     </>

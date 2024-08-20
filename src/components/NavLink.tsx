@@ -6,7 +6,7 @@ interface INavLinkProps {
 
 export default function NavLink({ name, url, isActive}: INavLinkProps) {
   return (
-    <a href={url} className={`${isActive ? 'after:w-full' : 'after:w-0'} relative after:absolute after:block after:transition-all after:mt-2 after:h-px after:bg-cyan-500`}>
+    <a href={url} aria-label={`Ir a ${name}`} className={`${isActive ? 'after:w-full' : 'after:w-0'} relative after:absolute after:block after:transition-all after:mt-2 after:h-px after:bg-cyan-500`}>
       {name}
     </a>
   )

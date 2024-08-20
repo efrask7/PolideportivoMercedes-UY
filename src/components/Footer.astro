@@ -4,18 +4,29 @@ import { BiSolidCopyright } from "react-icons/bi";
 ---
 
 <footer class="flex flex-col gap-4 m-auto py-24 text-neutral-400">
-  <a href="tel:+59896243858" class="hover:text-white"
-    ><BsTelephoneFill /> 096 243 858</a
+  <a
+    href="tel:+59896243858"
+    class="hover:text-white"
+    aria-label="Telefonó de Polideportivo"><BsTelephoneFill /> 096 243 858</a
   >
-  <a href="mailto:polideportivo@soriano.gub.uy" class="hover:text-white"
+  <a
+    href="mailto:polideportivo@soriano.gub.uy"
+    class="hover:text-white"
+    aria-label="Correo de Polideportivo"
     ><BsEnvelopeFill /> polideportivo@soriano.gub.uy</a
   >
   <a
     href="https://www.google.com/maps/dir//PWXC%2BPWV,+75000+Mercedes,+Departamento+de+Soriano/@-33.2506022,-58.160101,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95a53ede5c90f7bf:0x762830497ae6d67a!2m2!1d-58.0777032!2d-33.2506341?entry=ttu"
     target="_blank"
-    class="hover:text-white"><BsPinMapFill /> Encuentranos Aqui!</a
+    class="hover:text-white"
+    aria-label="Ubicación del Polideportivo"
+    ><BsPinMapFill /> Encuentranos Aqui!</a
   >
-  <a href="https://soriano.gub.uy" target="_blank" class="hover:text-white"
+  <a
+    href="https://soriano.gub.uy"
+    target="_blank"
+    class="hover:text-white"
+    aria-label="Página traida por la Intendencia de Soriano"
     ><BiSolidCopyright /> {new Date().getFullYear()} Intendencia de Soriano</a
   >
 </footer>

@@ -9,7 +9,7 @@ export default function NavResponsive() {
 
   return (
     <>
-    <button className="text-2xl" onClick={() => setOpen(true)}>
+    <button className="text-2xl" onClick={() => setOpen(true)} aria-label="Abrir menu de navegación">
       <RiFunctionLine />
     </button>
 
@@ -21,7 +21,7 @@ export default function NavResponsive() {
         className="w-3/4 h-full bg-neutral-900 flex flex-col gap-8 justify-center items-center text-4xl"
         onClick={ev => ev.stopPropagation()}
       >
-        <button className="absolute top-10 right-12 text-6xl" onClick={() => setOpen(false)}>
+        <button className="absolute top-10 right-12 text-6xl" onClick={() => setOpen(false)} aria-label="Cerrar menu de navegación">
           <BsX/>
         </button>
         <NavLink name="Inicio" url="#main" />

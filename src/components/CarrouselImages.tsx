@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from "swiper/modules";
-import { useState } from "react";
+import { useCallback, useState, type MouseEvent } from "react";
 import { ImgViewer } from "./ImgViewer";
 
 interface ICarrouselImagesProps {
@@ -9,16 +9,29 @@ interface ICarrouselImagesProps {
 
 export default function CarrouselImages({ images }: ICarrouselImagesProps) {
 
-  const [selectedImage, setSelectedImage] = useState({
-    src: '',
-    alt: ''
-  })
+  const [selectedImage, setSelectedImage] = useState(0)
   const [imgViewerOpen, setImgViewerOpen] = useState(false)
 
-  function openImgViewer(src: string, alt: string) {
-    setSelectedImage({src, alt})
+  function openImgViewer(index: number) {
+    setSelectedImage(index)
     setImgViewerOpen(true)
   }
+
+  const prevImage = useCallback((ev?: MouseEvent) => {
+    setSelectedImage(prev => {
+      if (prev <= 0) return images.length - 1
+      return prev-1
+    })
+    if (ev) ev.stopPropagation()
+  }, [selectedImage, images])
+
+  const nextImage = useCallback((ev?: MouseEvent) => {
+    setSelectedImage(prev => {
+      if (prev >= images.length - 1) return 0
+      return prev+1
+    })
+    if (ev) ev.stopPropagation()
+  }, [selectedImage, images])
 
   return (
     <>
@@ -35,7 +48,7 @@ export default function CarrouselImages({ images }: ICarrouselImagesProps) {
     >
       {
         images.map((image, index) => (
-          <SwiperSlide key={index} className="h-72 transition-transform hover:scale-105" style={{width: '12rem !important'}} tag="button" onClick={() => openImgViewer(image, `${index}`)}>
+          <SwiperSlide key={index} className="h-72 transition-transform hover:scale-105" style={{width: '12rem !important'}} tag="button" onClick={() => openImgViewer(index)}>
             <img src={image} alt={`Image ${index}`} className="w-56 h-72 rounded-md"/>
           </SwiperSlide>
         ))
@@ -43,10 +56,14 @@ export default function CarrouselImages({ images }: ICarrouselImagesProps) {
     </Swiper>
 
     <ImgViewer
-      alt={selectedImage.alt}
-      src={selectedImage.src}
+      src={images[selectedImage]}
+      alt={`Img-${selectedImage}`}
       open={imgViewerOpen}
       close={() => setImgViewerOpen(false)}
+      buttons={{
+        prevBtn: prevImage,
+        nextBtn: nextImage
+      }}
     />
     </>
   )
