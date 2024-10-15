@@ -51,6 +51,8 @@ export default function MenuBar() {
       {menu.map((item, i) => {
         const aRef = useRef<HTMLAnchorElement>(null)
         const [itemSize, setItemSize] = useState(48)
+        const [onAnimation, setOnAnimation] = useState(false)
+        const [onTransition, setOnTransition] = useState(false)
         
         useEffect(() => {
           if (!aRef.current || !navRef.current) return
@@ -76,16 +78,37 @@ export default function MenuBar() {
           })
         }, [mousePosition, isMouseInside])
 
+        useEffect(() => {
+          if (!aRef.current) return
+
+          if (onAnimation && !onTransition) {
+            setOnAnimation(false)
+          }
+        }, [onAnimation, aRef, onTransition])
+
+        const handleOnClick = React.useCallback((ev: React.MouseEvent, url: string) => {
+          if (window.location.pathname === url) {
+            ev.preventDefault()
+          }          
+          
+          if (!aRef.current) return
+          setOnTransition(true)
+          setOnAnimation(true)
+        }, [aRef])
+
         return (
           <a 
             ref={aRef}
-            href={item.url} 
+            href={item.url}
+            onTransitionEnd={() => setOnTransition(false)}
             key={i} 
             className="grid place-content-center bg-[#232323] text-[#7E7E7E] rounded-full transition-all duration-200 ease-out"
             style={{
               width: itemSize,
               height: itemSize,
+              transform: onAnimation ? 'translateY(-1rem)' : 'translateY(0)'
             }}
+            onClick={(e) => handleOnClick(e, item.url)}
           >
             {React.cloneElement(item.icon, { 
               size: itemSize * 0.5,
