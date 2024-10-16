@@ -22,12 +22,19 @@ export default function TracksCarrousel({ title, subtitle, tracks, from }: ITrac
 
   useEffect(() => {
     if (!divRef.current) return
-    window.addEventListener('scroll', () => {
+
+    function handleWindowScroll() {
       if (window.scrollY + window.innerHeight > divRef.current!.offsetTop) {
         setVisible(true)
         window.removeEventListener('scroll', () => {})
       }
-    })
+    }
+
+    window.addEventListener('scroll', handleWindowScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleWindowScroll)
+    }
   }, [divRef])
 
   return (

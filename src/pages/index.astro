@@ -18,19 +18,16 @@ import carrouselImages from "@Data/images.json";
       isShort
       images={[
         {
-          src: "https://polideportivomercedes.com.uy/assets/img/carouselHistoria/carousel-10.jpg",
+          src: "/images/historiaFoto1.jpg",
           alt: "history-1",
         },
         {
-          src: "https://polideportivomercedes.com.uy/assets/img/carouselHistoria/carousel-8.jpg",
+          src: "/images/carrousel/carousel-10.jpg",
           alt: "history-2",
         },
       ]}
     />
-    <Video
-      src="https://polideportivomercedes.com.uy/assets/video/TCR.mp4"
-      client:visible
-    />
+    <Video src="/videos/video2.mp4" client:visible />
     <ComingEvents />
     <CarrouselImages images={carrouselImages} client:load />
 
@@ -52,7 +49,7 @@ import carrouselImages from "@Data/images.json";
 
     <Video
       title="Video Tour"
-      src="https://polideportivomercedes.com.uy/assets/video/video.mp4"
+      src="/videos/video1.mp4"
       id="pruebaPista"
       client:visible
     />

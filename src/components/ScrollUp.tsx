@@ -9,13 +9,19 @@ export default function ScrollUp() {
   useEffect(() => {
     if (!btnRef.current) return
 
-    window.addEventListener("scroll", () => {
+    function handleWindowScroll() {
       if (window.scrollY >= 200) {
         setOpacity(100)
       } else {
         setOpacity(0)
       }
-    })
+    }
+
+    window.addEventListener("scroll", handleWindowScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleWindowScroll)
+    }
 
   }, [btnRef, setOpacity])
 

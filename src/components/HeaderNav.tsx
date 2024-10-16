@@ -17,6 +17,10 @@ export default function HeaderNav() {
       })
     }
     window.addEventListener('scroll', scrollListener)
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener)
+    }
   }, [])
 
   return (

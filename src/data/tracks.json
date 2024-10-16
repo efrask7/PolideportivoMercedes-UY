@@ -1,77 +1,77 @@
 [
   {
     "title": "Circuito 1",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n1.svg",
+    "image": "/images/tracks/c_n1.svg",
     "mts": "1.900"
   },
   {
     "title": "Circuito 2",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n3.svg",
+    "image": "/images/tracks/c_n3.svg",
     "mts": "2.930"
   },
   {
     "title": "Circuito 3",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n5.svg",
+    "image": "/images/tracks/c_n5.svg",
     "mts": "2.610"
   },
   {
     "title": "Circuito 4",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n7.svg",
+    "image": "/images/tracks/c_n7.svg",
     "mts": "2.410"
   },
   {
     "title": "Circuito 5",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n8.svg",
+    "image": "/images/tracks/c_n8.svg",
     "mts": "2.070"
   },
   {
     "title": "Circuito 6",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n9.svg",
+    "image": "/images/tracks/c_n9.svg",
     "mts": "1.880"
   },
   {
     "title": "Circuito 7",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n10.svg",
+    "image": "/images/tracks/c_n10.svg",
     "mts": "1.540"
   },
   {
     "title": "Circuito 8",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n11.svg",
+    "image": "/images/tracks/c_n11.svg",
     "mts": "2.960"
   },
   {
     "title": "Circuito 9",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n12.svg",
+    "image": "/images/tracks/c_n12.svg",
     "mts": "2.630"
   },
   {
     "title": "Circuito 10",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n13.svg",
+    "image": "/images/tracks/c_n13.svg",
     "mts": "1.890"
   },
   {
     "title": "Circuito 11",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n14.svg",
+    "image": "/images/tracks/c_n14.svg",
     "mts": "1.560"
   },
   {
     "title": "Circuito 12",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n15.svg",
+    "image": "/images/tracks/c_n15.svg",
     "mts": "1.640"
   },
   {
     "title": "Circuito 13",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n16.svg",
+    "image": "/images/tracks/c_n16.svg",
     "mts": "1.300"
   },
   {
     "title": "Circuito 14",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n17.svg",
+    "image": "/images/tracks/c_n17.svg",
     "mts": "1.410"
   },
   {
     "title": "Circuito 15",
-    "image": "https://polideportivomercedes.com.uy/assets/img/circuitos/c_n18.svg",
+    "image": "/images/tracks/c_n18.svg",
     "mts": "1.070"
   }
 ]
