@@ -9,7 +9,6 @@ const { title } = Astro.props as {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import MenuBar from "@Components/MenuBar";
 ---
 
 <html lang="en" class="overflow-x-hidden size-full">
@@ -29,7 +28,6 @@ import MenuBar from "@Components/MenuBar";
     </div>
 
     <ScrollUp transition:persist client:load />
-    <MenuBar client:load transition:persist />
 
     <Footer />
   </body>
