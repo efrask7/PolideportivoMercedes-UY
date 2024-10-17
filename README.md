@@ -7,6 +7,9 @@ Este proyecto tiene como objetivo ampliar mis conocimientos en el uso de framewo
 - **Frameworks**: [Astro](https://astro.build), [React](https://react.dev), [Tailwind](https://tailwindcss.com/)
 - **Bibliotecas**: [react-icons](https://www.npmjs.com/package/react-icons), [Swiper](https://swiperjs.com/react)
 
+## Demo
+Puedes probar el proyecto funcional desde la pagina: [polidepuy.efrask.dev](https://polidepuy.efrask.dev/)
+
 ## Instalación
 
 ```bash
