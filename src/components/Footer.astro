@@ -3,36 +3,38 @@ import { BsTelephoneFill, BsEnvelopeFill, BsPinMapFill } from "react-icons/bs";
 import { BiSolidCopyright } from "react-icons/bi";
 ---
 
-<footer class="flex flex-col gap-4 m-auto py-24 text-neutral-400">
-  <a
-    href="tel:+59896243858"
-    class="hover:text-white"
-    aria-label="Telefonó de Polideportivo"><BsTelephoneFill /> 096 243 858</a
-  >
-  <a
-    href="mailto:polideportivo@soriano.gub.uy"
-    class="hover:text-white"
-    aria-label="Correo de Polideportivo"
-    ><BsEnvelopeFill /> polideportivo@soriano.gub.uy</a
-  >
-  <a
-    href="https://www.google.com/maps/dir//PWXC%2BPWV,+75000+Mercedes,+Departamento+de+Soriano/@-33.2506022,-58.160101,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95a53ede5c90f7bf:0x762830497ae6d67a!2m2!1d-58.0777032!2d-33.2506341?entry=ttu"
-    target="_blank"
-    class="hover:text-white"
-    aria-label="Ubicación del Polideportivo"
-    ><BsPinMapFill /> Encuentranos Aqui!</a
-  >
-  <a
-    href="https://soriano.gub.uy"
-    target="_blank"
-    class="hover:text-white"
-    aria-label="Página traida por la Intendencia de Soriano"
-    ><BiSolidCopyright /> {new Date().getFullYear()} Intendencia de Soriano</a
+<footer class="flex flex-col gap-6 m-auto py-24">
+  <div class="flex flex-col gap-4 m-auto text-neutral-400">
+    <a href="#" class="hover:text-white" aria-label="Telefonó de Polideportivo"
+      ><BsTelephoneFill /> 000 000 000</a
+    >
+    <a href="#" class="hover:text-white" aria-label="Correo de Polideportivo"
+      ><BsEnvelopeFill /> correo@dominio.com</a
+    >
+    <a
+      href="#"
+      target="_blank"
+      class="hover:text-white"
+      aria-label="Ubicación del Polideportivo"
+      ><BsPinMapFill /> Encuentranos Aqui!</a
+    >
+    <a
+      href="https://efrask.dev"
+      target="_blank"
+      class="hover:text-white"
+      aria-label="Página clonada por efrask"
+      ><BiSolidCopyright /> {new Date().getFullYear()} efrask.dev</a
+    >
+  </div>
+
+  <span class="text-neutral-200"
+    >Este clon fue creado únicamente con fines educativos y no tiene ninguna
+    relación oficial con el Polideportivo Mercedes.</span
   >
 </footer>
 
 <style>
-  footer > a {
+  footer a {
     display: flex;
     align-items: center;
     gap: 1rem;
